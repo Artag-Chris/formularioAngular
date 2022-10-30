@@ -1,6 +1,5 @@
-<div class="container-fluid position-absolute" style="background:url(https://cdn.wallpapersafari.com/54/23/oSfm2X.jpg);">
-    <div class="container ">
-  
+<div class="container-fluid position-absolute" >
+    <div class="container ">  
     <h1 class="title text-center" style="color: rgb(51, 35, 226);"> Relacione la Información</h1>
     <form [formGroup]="checkoutForm " (ngSubmit)="onSubmit()">
         <div class="form-group">
@@ -28,15 +27,33 @@
             <label style="color:blue"  for="identificacion"> Identificacion</label>
             <input style="background-color:aquamarine ;" class="form-control" id="identificacion" type="number" formControlName="identificacion">
         </div>
-        <button style="background-color:aquamarine ; color: blue;" class="btn btn-primary " type="submit">Enviar</button>
-        <p style="color:blue; background-color:aquamarine ;"  >{{checkoutForm.value.nombre}}</p>
-        <p style="color:blue; background-color:aquamarine;" >{{checkoutForm.value.apellido}}</p>
-        <p style="color:blue; background-color:aquamarine ;" >{{checkoutForm.value.direccion}}</p>
-        <p style="color:blue; background-color:aquamarine;" >{{checkoutForm.value.correo}}</p>
-        <p style="color:blue; background-color:aquamarine;" >{{checkoutForm.value.celular}}</p>
-        <p style="color:blue; background-color:aquamarine ;" >{{checkoutForm.value.identificacion}}</p>
+        <button style="background-color:aquamarine ; color: blue; margin-top: 20px;" class="btn btn-primary " type="submit">Enviar</button>
 
     </form>
-    
+    </div>
+    <div class="container mt-4">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">correo</th>
+            <th scope="col">Celular</th>
+            <th scope="col">Identificacion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of dataUsuario">
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.apellido}}</td>
+            <td>{{usuario.direccion}}</td>
+            <td>{{usuario.correo}}</td>
+            <td>{{usuario.celular}}</td>
+            <td>{{usuario.identificacion}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
 </div>

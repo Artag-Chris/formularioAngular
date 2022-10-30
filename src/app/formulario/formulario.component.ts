@@ -7,6 +7,7 @@ import {NgForm, FormBuilder} from '@angular/forms';
   styleUrls: ['./formulario.component.css'],
 })
 export class FormularioComponent {
+  dataUsuario: any = [];
   checkoutForm = this.formBuilder.group({
     nombre: '',
     apellido: '',
@@ -16,9 +17,10 @@ export class FormularioComponent {
     identificacion: '',
   });
   constructor(private formBuilder: FormBuilder) { }
-
+  //style="background:url(https://cdn.wallpapersafari.com/54/23/oSfm2X.jpg);"
   onSubmit() {
-    console.log(this.checkoutForm.value);  // { formularioirst: '', last: '' }
-  
+    this.dataUsuario.push(this.checkoutForm.value)
+    console.log(this.dataUsuario);  // { formularioirst: '', last: '' }
+    this.checkoutForm.reset()
   }
 }
