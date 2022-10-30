@@ -1,42 +1,28 @@
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-
-    <div>
-        <label for="firstName">
-            firstName
-        </label>
-        <input id="firstName" type="text" formControlName="firstName">
+    <div class="form-group">
+        <label  for="firstName">firstName</label>
+        <input class="form-control" id="firstName" type="text" formControlName="firstName">
     </div>
-    <div>
-        <label for="lastName">
-            lastName
-        </label>
-        <input id="lastName" type="text" formControlName="lastName">
+    <div class="form-group">
+        <label for="lastName">lastName</label>
+        <input class="form-control" id="lastName" type="text" formControlName="lastName">
     </div>
-
-    <div>
-        <label for="address">
-            Address
-        </label>
-        <input id="address" type="text" formControlName="address">
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input class="form-control" id="address" type="text" formControlName="address">
     </div>
-    <div>
-        <label for="email">
-            Email
-        </label>
-        <input id="email" type="text" formControlName="email">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" id="email" type="text" formControlName="email">
     </div>
-    <div>
-        <label for="cell">
-            Cell
-        </label>
-        <input id="cell" type="number" formControlName="cell">
+    <div class="form-group">
+        <label for="cell"> Cell</label>
+        <input class="form-control" id="cell" type="number" formControlName="cell">
     </div>
-    <div>
-        <label for="id">
-            Id
-        </label>
-        <input id="id" type="number" formControlName="id">
+    <div class="form-group">
+        <label for="id"> Id</label>
+        <input class="form-control" id="id" type="number" formControlName="id">
     </div>
     <button class="button" type="submit">Purchase</button>
 
