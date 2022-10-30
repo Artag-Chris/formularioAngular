@@ -1,20 +1,13 @@
 import {Component} from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'example-app',
-  template: `
-    <input [(ngModel)]="name" #ctrl="ngModel" required>
-
-    <p>Value: {{ name }}</p>
-    <p>Valid: {{ ctrl.valid }}</p>
-
-    <button (click)="setValue()">Set value</button>
-  `,
+  templateUrl: './formulario.component.html',
 })
 export class FormularioComponent {
-  name: string = '';
-
-  setValue() {
-    this.name = 'Nancy';
+  onSubmit(formulario: NgForm) {
+    console.log(formulario.value);  // { formularioirst: '', last: '' }
+    console.log(formulario.valid);  // false
   }
 }
