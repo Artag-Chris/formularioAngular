@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-formulario',
-  templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.css']
+  selector: 'example-app',
+  template: `
+    <input [(ngModel)]="name" #ctrl="ngModel" required>
+
+    <p>Value: {{ name }}</p>
+    <p>Valid: {{ ctrl.valid }}</p>
+
+    <button (click)="setValue()">Set value</button>
+  `,
 })
-export class FormularioComponent implements OnInit {
+export class FormularioComponent {
+  name: string = '';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  setValue() {
+    this.name = 'Nancy';
   }
-
 }
