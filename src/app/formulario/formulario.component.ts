@@ -8,12 +8,12 @@ import {NgForm, FormBuilder} from '@angular/forms';
 })
 export class FormularioComponent {
   checkoutForm = this.formBuilder.group({
-    firstName: '',
-    lastName: '',
-    address: '',
-    email:'',
-    cell: '',
-    id: '',
+    nombre: '',
+    apellido: '',
+    direccion: '',
+    correo:'',
+    celular: '',
+    identificacion: '',
   });
   constructor(private formBuilder: FormBuilder) { }
 

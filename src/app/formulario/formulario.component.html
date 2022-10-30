@@ -1,34 +1,42 @@
-<div class="container m-0 w-75 ">
-    <h1 class="title text-center"> Evaluativa eje 2</h1>
+<div class="container-fluid position-absolute" style="background:url(https://cdn.wallpapersafari.com/54/23/oSfm2X.jpg);">
+    <div class="container ">
+  
+    <h1 class="title text-center" style="color: rgb(51, 35, 226);"> Relacione la Información</h1>
     <form [formGroup]="checkoutForm " (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label for="firstName">firstName</label>
-            <input class="form-control" id="firstName" type="text" formControlName="firstName">
+            <label style="color:blue" for="nombre">Nombre</label>
+            <input style="background-color:aquamarine ;" class="form-control" id="nombre" type="text" formControlName="nombre">
         </div>
         <div class="form-group">
-            <label for="lastName">lastName</label>
-            <input class="form-control" id="lastName" type="text" formControlName="lastName">
+            <label style="color:blue"  for="apellido">  Apellido</label>
+            <input style="background-color:aquamarine ; "class="form-control" id="apellido" type="text" formControlName="apellido">
         </div>
         <div class="form-group">
-            <label for="address">Address</label>
-            <input class="form-control" id="address" type="text" formControlName="address">
+            <label style="color:blue"  for="direccion">Direccion</label>
+            <input style="background-color:aquamarine ;" class="form-control" id="direccion" type="text" formControlName="direccion">
         </div>
         <div class="form-group">
-            <label for="email">Email</label>
-            <input class="form-control" id="email" type="text" formControlName="email">
+            <label style="color:blue"  for="correo">correo</label>
+            <input style="background-color:aquamarine ;" class="form-control" id="correo" type="text" formControlName="correo">
+        </div>
+        
+        <div class="form-group">
+            <label style="color:blue"  for="celular"> Celular</label>
+            <input style="background-color:aquamarine ;" class="form-control" id="celular" type="number" formControlName="celular">
         </div>
         <div class="form-group">
-            <label for="cell"> Cell</label>
-            <input class="form-control" id="cell" type="number" formControlName="cell">
+            <label style="color:blue"  for="identificacion"> Identificacion</label>
+            <input style="background-color:aquamarine ;" class="form-control" id="identificacion" type="number" formControlName="identificacion">
         </div>
-        <div class="form-group">
-            <label for="id"> Id</label>
-            <input class="form-control" id="id" type="number" formControlName="id">
-        </div>
-        <button class="button" type="submit">Purchase</button>
+        <button style="background-color:aquamarine ; color: blue;" class="btn btn-primary " type="submit">Enviar</button>
+        <p style="color:blue; background-color:aquamarine ;"  >{{checkoutForm.value.nombre}}</p>
+        <p style="color:blue; background-color:aquamarine;" >{{checkoutForm.value.apellido}}</p>
+        <p style="color:blue; background-color:aquamarine ;" >{{checkoutForm.value.direccion}}</p>
+        <p style="color:blue; background-color:aquamarine;" >{{checkoutForm.value.correo}}</p>
+        <p style="color:blue; background-color:aquamarine;" >{{checkoutForm.value.celular}}</p>
+        <p style="color:blue; background-color:aquamarine ;" >{{checkoutForm.value.identificacion}}</p>
 
     </form>
-    <p>{{checkoutForm.value.firstName}}</p>
-    <p>{{checkoutForm.value.lastName}}</p>
+    
 
 </div>
