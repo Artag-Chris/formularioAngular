@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {NgForm} from '@angular/forms';
 
 @Component({
-  selector: 'example-app',
+  selector: 'form-app',
   templateUrl: './formulario.component.html',
 })
 export class FormularioComponent {
