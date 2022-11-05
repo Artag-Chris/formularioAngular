@@ -1,34 +1,57 @@
-<div class="container m-0 w-75 ">
-    <h1 class="title text-center"> Evaluativa eje 2</h1>
+<div class="container-fluid position-absolute" style="background:url(https://www.exitoysuperacionpersonal.com/wp-content/uploads/2017/11/Tranquilidad.jpg);">
+    <div class="container m-0 w-75">
+    <h1 class="title text-center " > Activity Two</h1>
     <form [formGroup]="checkoutForm " (ngSubmit)="onSubmit()">
-        <div class="form-group">
+        <div class="form-group" >
             <label for="firstName">firstName</label>
             <input class="form-control" id="firstName" type="text" formControlName="firstName">
         </div>
-        <div class="form-group">
+        <div class="form-group" >
             <label for="lastName">lastName</label>
             <input class="form-control" id="lastName" type="text" formControlName="lastName">
         </div>
-        <div class="form-group">
+        <div class="form-group" >
             <label for="address">Address</label>
             <input class="form-control" id="address" type="text" formControlName="address">
         </div>
-        <div class="form-group">
+        <div class="form-group" >
             <label for="email">Email</label>
             <input class="form-control" id="email" type="text" formControlName="email">
         </div>
-        <div class="form-group">
-            <label for="cell"> Cell</label>
-            <input class="form-control" id="cell" type="number" formControlName="cell">
+        <div class="form-group" >
+            <label for="cellphone"> Cellphone</label>
+            <input class="form-control" id="cellphone" type="number" formControlName="cellphone">
         </div>
-        <div class="form-group">
-            <label for="id"> Id</label>
-            <input class="form-control" id="id" type="number" formControlName="id">
+        <div class="form-group" >
+            <label for="identification"> Identification</label>
+            <input class="form-control" id="identification" type="number" formControlName="identification">
         </div>
-        <button class="button" type="submit">Purchase</button>
+        <button style="background-color:black;color:blanchedalmond" class="button" type="submit">save</button>
 
     </form>
-    <p>{{checkoutForm.value.firstName}}</p>
-    <p>{{checkoutForm.value.lastName}}</p>
-
+    </div>
+    <div class="container mt-6">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Cellphone</th>
+                <th scope="col">Identification</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usersdata">
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.address}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.cellphone}}</td>
+                <td>{{user.identification}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
 </div>

@@ -7,18 +7,20 @@ import {NgForm, FormBuilder} from '@angular/forms';
   styleUrls: ['./formulario.component.css'],
 })
 export class FormularioComponent {
+  usersdata: any = [];
   checkoutForm = this.formBuilder.group({
     firstName: '',
     lastName: '',
     address: '',
     email:'',
-    cell: '',
-    id: '',
+    cellphone: '',
+    identification: '',
   });
   constructor(private formBuilder: FormBuilder) { }
 
   onSubmit() {
-    console.log(this.checkoutForm.value);  // { formularioirst: '', last: '' }
-  
+    this.usersdata.push(this.checkoutForm.value)
+    console.log(this.usersdata); 
+    this.checkoutForm.reset()  
   }
 }
